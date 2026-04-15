@@ -25,21 +25,34 @@
   # -----------------------
   # NVIDIA
   # -----------------------
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = false;
-    nvidiaSettings = true;
-  };
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
-
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
-  };  
+  };
+  # -----------------------
+  # ZSH
+  # -----------------------
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    ohMyZsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "sudo"
+        "z"
+        "colored-man-pages"
+        "command-not-found"
+      ];
+      theme = "";
+    };
+  };
+  programs.starship.enable = true;
   # -----------------------
   # DISPLAY / LOGIN
   # -----------------------
@@ -47,6 +60,19 @@
   services.displayManager.sddm = {
     enable = true;
   };
+  
+  systemd.user.services.swayosd = {
+  description = "SwayOSD server";
+  wantedBy = [ "graphical-session.target" ];
+  after = [ "graphical-session.target" ];
+  partOf = [ "graphical-session.target" ];  # add this line
+  serviceConfig = {
+    ExecStart = "${pkgs.swayosd}/bin/swayosd-server";
+    Restart = "on-failure";
+    RestartSec = "3s";
+  };
+};
+
   # -----------------------
   # HYPRLAND
   # -----------------------
@@ -80,13 +106,15 @@
   # INPUT
   # -----------------------
   services.libinput.enable = true;
-
+  # -----------------------
+  # FONTS
+  # -----------------------
   fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-color-emoji
-  nerd-fonts.jetbrains-mono
-  icomoon-feather
-];
+    noto-fonts
+    noto-fonts-color-emoji
+    nerd-fonts.jetbrains-mono
+    icomoon-feather
+  ];
   services.mullvad-vpn.enable = true;
   services.gnome.sushi.enable = true;
   # -----------------------
@@ -97,6 +125,7 @@
     # terminals
     alacritty
     kitty
+    starship
     # wayland tools
     waybar
     rofi
@@ -105,6 +134,7 @@
     hypridle
     hyprlock
     hyprshot
+    pkgs.hyprshade
     hyprshell
     hyprpicker
     imv
@@ -113,6 +143,7 @@
     sushi
     xfce.tumbler
     webp-pixbuf-loader
+    swayosd
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
@@ -121,6 +152,8 @@
     zathura
     easyeffects
     playerctl
+    cliphist
+    wl-clipboard
     # cli
     git
     gh
@@ -182,10 +215,6 @@
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
-    NVD_BACKEND = "direct";
     WLR_NO_HARDWARE_CURSORS = "1";
     GST_PLUGIN_SYSTEM_PATH_1_0 = "${pkgs.gst_all_1.gst-plugins-base}/lib/gstreamer-1.0:${pkgs.gst_all_1.gst-plugins-good}/lib/gstreamer-1.0:${pkgs.gst_all_1.gst-plugins-bad}/lib/gstreamer-1.0";
   };
@@ -201,6 +230,7 @@
   users.users.nix = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" "docker" ];
+    shell = pkgs.zsh;
   };
   # -----------------------
   # UNFREE PACKAGES

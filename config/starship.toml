@@ -1,0 +1,31 @@
+# Starship configuration file
+format = "$username$directory$git_branch\n$character"
+
+[username]
+show_always = true
+format = "[$user@](bold #cba6f7)"
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+format = "[$path](bold #89b4fa) "
+style = "bold #89b4fa"
+
+[git_branch]
+symbol = ""
+format = "[@$branch](bold #a6e3a1)"
+style = "bold #a6e3a1"
+
+[git_status]
+disabled = true
+[git_commit]
+disabled = true
+[git_state]
+disabled = true
+[git_metrics]
+disabled = true
+
+[character]
+success_symbol = '[╰─➤](bold #cba6f7)'
+error_symbol = '[╰─➤](bold #f38ba8)'
+vimcmd_symbol = '[╰─➤](bold #cdd6f4)'
