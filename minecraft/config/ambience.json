@@ -1,0 +1,520 @@
+[
+  {
+    "name": "General",
+    "options": [],
+    "groups": [
+      {
+        "name": "Global",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Mod Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      },
+      {
+        "name": "World Time",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Override Time",
+            "type": "boolean",
+            "value": true,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Time Value",
+            "type": "integer",
+            "value": 18000,
+            "min": 0,
+            "max": 24000,
+            "increment": 100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Environment",
+    "options": [],
+    "groups": [
+      {
+        "name": "Sky \u0026 Atmosphere",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Sky Color Enabled",
+            "type": "boolean",
+            "value": true,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Sky Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 99,
+              "g": 211,
+              "b": 255,
+              "a": 255,
+              "value": -10234881,
+              "hue": 0.5470085,
+              "saturation": 0.6117647,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      },
+      {
+        "name": "Fog",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Overworld Fog Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Overworld Fog Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Nether Fog Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Nether Fog Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "End Fog Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "End Fog Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Fog Distance Enabled",
+            "type": "boolean",
+            "value": true,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Fog Distance",
+            "type": "double",
+            "value": 33.0,
+            "min": 0.0,
+            "max": 33.0,
+            "increment": 1.0
+          }
+        ]
+      },
+      {
+        "name": "Fluid",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Water Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Water Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Lava Tint Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Lava Tint",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      },
+      {
+        "name": "Clouds",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Cloud Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Cloud Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vegetation",
+    "options": [],
+    "groups": [
+      {
+        "name": "Grass Settings",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Grass Block Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Grass Block Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Grass Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Grass Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      },
+      {
+        "name": "Leaf Settings",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Leaf Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Leaf Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      },
+      {
+        "name": "Other Vegetation",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Fern Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Fern Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Vine Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Vine Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Lily Pad Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Lily Pad Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Seagrass Color Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          },
+          {
+            "name": "Seagrass Color",
+            "type": "walksylibcolor",
+            "value": {
+              "r": 255,
+              "g": 255,
+              "b": 255,
+              "a": 255,
+              "value": -1,
+              "hue": 0.0,
+              "saturation": 0.0,
+              "brightness": 1.0,
+              "rainbow": false,
+              "rainbowSpeed": 5,
+              "pulse": false,
+              "pulseSpeed": 5
+            },
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      }
+    ]
+  }
+]

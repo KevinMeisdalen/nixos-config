@@ -1,0 +1,36 @@
+[
+  {
+    "name": "General",
+    "options": [],
+    "groups": [
+      {
+        "name": "Global Options",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Mod Enabled",
+            "type": "boolean",
+            "value": false,
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      },
+      {
+        "name": "Client Sided Explosion Options",
+        "expanded": true,
+        "options": [
+          {
+            "name": "Client Sided Explosion",
+            "type": "boolean",
+            "value": true,
+            "min": null,
+            "max": null,
+            "increment": null
+          }
+        ]
+      }
+    ]
+  }
+]

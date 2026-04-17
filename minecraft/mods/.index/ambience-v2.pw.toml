@@ -1,0 +1,16 @@
+filename = 'Ambience-2.1.1-1.21.11.jar'
+name = 'Ambience V2'
+side = 'client'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.11' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '10606a7b605b09192fc805cbf296c7af67beda180621b5917aa88602db1285d34038c3a2af755a3e8f8fd1dbc8d6e91480ae392340713820cfcf480e2922e6ea'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/BykykDiv/versions/g0Z7hH8Y/Ambience-2.1.1-1.21.11.jar'
+
+[update.modrinth]
+mod-id = 'BykykDiv'
+version = 'g0Z7hH8Y'

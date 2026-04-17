@@ -1,0 +1,11 @@
+logs/
+screenshots/
+saves/
+downloads/
+local/
+usercache.json
+realms_persistence.json
+servers.dat
+servers.dat_old
+command_history.txt
+debug-profile.json
