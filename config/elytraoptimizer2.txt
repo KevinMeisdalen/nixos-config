@@ -1,0 +1,10 @@
+offset: 0.0
+pivot: 0.0
+instantGlide: false
+hudX: 4
+hudY: 14
+showHud: true
+linger: 3000
+indent: left
+superman: false
+supermanAngle: 135

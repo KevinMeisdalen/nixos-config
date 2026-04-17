@@ -197,10 +197,10 @@
     age
     sops
     # apps
-    brave
     firefox
     discord
     spotify
+    prismlauncher
     bitwarden-desktop
     obsidian
     nextcloud-client
