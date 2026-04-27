@@ -29,14 +29,57 @@ My personal NixOS dotfiles and configuration.
 4. Rebuild:
    `sudo nixos-rebuild switch`
 
+
+## Updating the system
+1. Clone the repo:
+   `git clone git@github.com:KevinMeisdalen/nixos-config.git ~/nixos-config`
+
+2. Edit configuration.nix and remove/keep nvidia:
+   `nano ~/nixos-config/configuration.nix`
+
+3. Copy configs:
+   ```
+   cp ~/nixos-config/configuration.nix /etc/nixos/
+   cp -r ~/nixos-config/dotfiles/* ~/.config/
+   cp ~/nixos-config/.zshrc ~/
+   ```
+
+4. Rebuild:
+   `sudo nixos-rebuild switch`
+
+
 ## Updating the Repo
 
 Run these commands to sync any changes back to the repo:
 ```
-   cp /etc/nixos/configuration.nix ~/nixos-config/
-   cp -r ~/.config/hypr ~/nixos-config/dotfiles/
-   cp -r ~/.config/waybar ~/nixos-config/dotfiles/
-   cp -r ~/.config/nvim ~/nixos-config/dotfiles/
-   cp ~/.zshrc ~/nixos-config/
-   cd ~/nixos-config && git add . && git commit -m "update" && git push
+   # system
+cp /etc/nixos/configuration.nix ~/nixos-config/
+cp ~/.zshrc ~/nixos-config/
+
+# dotconfig dirs
+cp -r ~/.config/alacritty  ~/nixos-config/dotconfig/
+cp -r ~/.config/bat        ~/nixos-config/dotconfig/
+cp -r ~/.config/btop       ~/nixos-config/dotconfig/
+cp -r ~/.config/cava       ~/nixos-config/dotconfig/
+cp -r ~/.config/dunst      ~/nixos-config/dotconfig/
+cp -r ~/.config/eza        ~/nixos-config/dotconfig/
+cp -r ~/.config/fastfetch  ~/nixos-config/dotconfig/
+cp -r ~/.config/gtk-3.0    ~/nixos-config/dotconfig/
+cp -r ~/.config/gtk-4.0    ~/nixos-config/dotconfig/
+cp -r ~/.config/hypr       ~/nixos-config/dotconfig/
+cp -r ~/.config/hyprshell  ~/nixos-config/dotconfig/
+cp -r ~/.config/kitty      ~/nixos-config/dotconfig/
+cp -r ~/.config/Kvantum    ~/nixos-config/dotconfig/
+cp -r ~/.config/nvim       ~/nixos-config/dotconfig/
+cp -r ~/.config/rofi       ~/nixos-config/dotconfig/
+cp -r ~/.config/waybar     ~/nixos-config/dotconfig/
+cp -r ~/.config/yazi       ~/nixos-config/dotconfig/
+cp -r ~/.config/zathura    ~/nixos-config/dotconfig/
+
+# dotconfig files
+cp ~/.config/mimeapps.list ~/nixos-config/dotconfig/
+cp ~/.config/starship.toml ~/nixos-config/dotconfig/
+
+# git
+cd ~/nixos-config && git add . && git commit -m "update" && git push
 ```
